@@ -31,7 +31,7 @@ int main()
 {
     dut_ptr = new Vtop;  //instantiating module top
 
-    dut_ptr->reset = 0;
+    // dut_ptr->reset = 0;
     dut_ptr->clk = 0;
     dut_ptr->eval();
     
