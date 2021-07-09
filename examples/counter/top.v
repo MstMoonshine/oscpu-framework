@@ -2,7 +2,7 @@
 module top (
     input clk,
     // input reset,
-    output reg [3:0] out);
+    output reg [15:0] out);
     
     always @(posedge clk) begin
         out <= out - 1;
