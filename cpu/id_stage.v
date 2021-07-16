@@ -38,9 +38,9 @@ assign func3  = inst[14 : 12];
 assign rs1    = inst[19 : 15];
 assign imm    = inst[31 : 20];
 
-wire inst_addi =   opcode[0] & ~opcode[1] & ~opcode[2] & ~opcode[3] & opcode[4] & ~opcode[5] & ~opcode[6]
+wire inst_addi =   ~opcode[2] & ~opcode[3] & opcode[4] & ~opcode[5] & ~opcode[6]
                  & ~func3[0] & ~func3[1] & ~func3[2];
-wire inst_andi =   opcode[0] & ~opcode[1] & ~opcode[2] & ~opcode[3] & opcode[4] & ~opcode[5] & ~opcode[6]
+wire inst_andi =   ~opcode[2] & ~opcode[3] & opcode[4] & ~opcode[5] & ~opcode[6]
                  & func3[0] & func3[1] & func3[2];
 
 // arith inst: 10000; logic: 01000;
