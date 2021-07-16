@@ -1,7 +1,7 @@
 CC = riscv64-unknown-elf-gcc
 OBJCOPY = riscv64-unknown-elf-objcopy
 
-CFLAGS = -nostdlib
+CFLAGS = -nostdlib -O0
 OBJCOPYFLAGS = -O binary
 
 all: test.bin
